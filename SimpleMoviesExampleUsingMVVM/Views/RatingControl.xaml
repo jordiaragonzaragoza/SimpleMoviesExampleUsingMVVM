@@ -1,0 +1,63 @@
+﻿<UserControl x:Class="SimpleMoviesExampleUsingMVVM.Views.RatingControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Viewbox Height="28" Width="140">
+        <Grid x:Name="gdStar" Background="White" VerticalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition  Width="14"/>
+                <ColumnDefinition  Width="14"/>
+                <ColumnDefinition  Width="14"/>
+                <ColumnDefinition  Width="14"/>
+                <ColumnDefinition  Width="14"/>
+            </Grid.ColumnDefinitions>
+
+            <Path Name="starForeground" Fill="Gold" Stroke="Red" StrokeThickness="1" 
+              Data="M 5,0 L 4,4 L 0,4 L 3,7 L 2,11 L 5,9 L 6,
+              9 L 9,11 L 8,7 L 11,4 L 7,4 L 6,0"/>
+            <Path Name="starForeground2" Fill="Gold" Stroke="Transparent" StrokeThickness="1"
+              Data="M 5,0 L 4,4 L 0,4 L 3,7 L 2,11 L 5,9 L 6,
+			9 L 9,11 L 8,7 L 11,4 L 7,4 L 6,0"
+              Grid.Column="1"/>
+            <Path Name="starForeground3" Fill="Gold" Stroke="Transparent" StrokeThickness="1"
+              Data="M 5,0 L 4,4 L 0,4 L 3,7 L 2,11 L 5,9 L 6,
+			9 L 9,11 L 8,7 L 11,4 L 7,4 L 6,0"
+              Grid.Column="2"/>
+            <Path Name="starForeground4" Fill="Gold" Stroke="Transparent" StrokeThickness="1"
+              Data="M 5,0 L 4,4 L 0,4 L 3,7 L 2,11 L 5,9 L 6,
+			9 L 9,11 L 8,7 L 11,4 L 7,4 L 6,0"
+              Grid.Column="3"/>
+            <Path Name="starForeground5" Fill="Gold" Stroke="Transparent" StrokeThickness="1"
+              Data="M 5,0 L 4,4 L 0,4 L 3,7 L 2,11 L 5,9 L 6,
+			9 L 9,11 L 8,7 L 11,4 L 7,4 L 6,0"
+              Grid.Column="4"/>
+
+            <Rectangle x:Name="mask" Fill="White" Grid.ColumnSpan="5" Margin="0,0,0,0"/>
+
+            <Path Name="starOutline" Fill="Transparent"
+		Stroke="Black" StrokeThickness="1"
+              Data="M 5,0 L 4,4 L 0,4 L 3,7 L 2,11 L 5,9 L 6,
+			9 L 9,11 L 8,7 L 11,4 L 7,4 L 6,0"/>
+            <Path Name="starOutline2" Fill="Transparent" 
+		Stroke="Black" StrokeThickness="1"
+              Data="M 5,0 L 4,4 L 0,4 L 3,7 L 2,11 L 5,9 L 6,
+			9 L 9,11 L 8,7 L 11,4 L 7,4 L 6,0"
+              Grid.Column="1"/>
+            <Path Name="starOutline3" Fill="Transparent" 
+		Stroke="Black" StrokeThickness="1"
+              Data="M 5,0 L 4,4 L 0,4 L 3,7 L 2,11 L 5,9 L 6,
+			9 L 9,11 L 8,7 L 11,4 L 7,4 L 6,0"
+              Grid.Column="2"/>
+            <Path Name="starOutline4" Fill="Transparent" 
+		Stroke="Black" StrokeThickness="1"
+              Data="M 5,0 L 4,4 L 0,4 L 3,7 L 2,11 L 5,9 L 6,
+			9 L 9,11 L 8,7 L 11,4 L 7,4 L 6,0"
+              Grid.Column="3"/>
+            <Path Name="starOutline5" Fill="Transparent" 
+		Stroke="Black" StrokeThickness="1"
+              Data="M 5,0 L 4,4 L 0,4 L 3,7 L 2,11 L 5,9 L 6,
+			9 L 9,11 L 8,7 L 11,4 L 7,4 L 6,0"
+              Grid.Column="4"/>
+
+        </Grid>
+    </Viewbox>
+</UserControl>
