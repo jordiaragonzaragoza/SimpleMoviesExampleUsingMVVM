@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace SimpleMoviesExampleUsingMVVM.Base.ViewModels
 {
-    public abstract class ViewModelBaseCollection<ViewModel, Model> : ObservableCollection<ViewModel>
+    public abstract class ViewModelCollectionBase<ViewModel, Model> : ObservableCollection<ViewModel>
     {
         #region Fields
 
@@ -13,17 +13,19 @@ namespace SimpleMoviesExampleUsingMVVM.Base.ViewModels
 
         #endregion
 
+        #region Properties
+        public IList<Model> DomainCollection { get { return _modelCollection; } }
+
+        #endregion
+
         #region Constructor
-        protected ViewModelBaseCollection()
-        {
-        }
-       
-        protected ViewModelBaseCollection(IEnumerable<Model> domainCollection)
+
+        protected ViewModelCollectionBase(IEnumerable<Model> modelCollection)
         {
             // Set the domain collection
-            _modelCollection = domainCollection.ToList();
+            _modelCollection = modelCollection.ToList();
 
-            foreach (var domainObject in domainCollection)
+            foreach (var domainObject in modelCollection)
             {
                 var paramList = new object[] { domainObject };
                 var wrapperObject = (ViewModel)Activator.CreateInstance(typeof(ViewModel), paramList);
@@ -33,10 +35,6 @@ namespace SimpleMoviesExampleUsingMVVM.Base.ViewModels
 
         #endregion
 
-        #region Propiedades
 
-        public IList<Model> DomainCollection { get { return _modelCollection; } }
-
-        #endregion
     }
 }

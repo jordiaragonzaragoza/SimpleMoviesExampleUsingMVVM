@@ -4,10 +4,10 @@ using SimpleMoviesExampleUsingMVVM.Models;
 
 namespace SimpleMoviesExampleUsingMVVM.ViewModels
 {
-    public class MoviesViewModelCollection : ViewModelBaseCollection<MovieViewModel, Movie>
+    public class MoviesViewModelCollection : ViewModelCollectionBase<MovieViewModel, Movie>
     {
-        public MoviesViewModelCollection(IEnumerable<Movie> lista)
-            : base(lista)
+        public MoviesViewModelCollection(IEnumerable<Movie> moviesCollection)
+            : base(moviesCollection)
         {
         }
     }

@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Windows;
-using System.Windows.Controls;
 
 namespace SimpleMoviesExampleUsingMVVM.Views
 {
-    /// <summary>
-    /// Lógica de interacción para RatingControl.xaml
-    /// </summary>
-    public partial class RatingControl : UserControl
+    public partial class RatingControl
     {
         private static double _startSize = 14;
 
@@ -15,26 +11,21 @@ namespace SimpleMoviesExampleUsingMVVM.Views
         {
             InitializeComponent();
         }
-
-
-        //Propiedad de dependencia
+        
         public static readonly DependencyProperty RatingValueProperty =
             DependencyProperty.Register("RatingValue", typeof(Double), typeof(RatingControl),
                 new FrameworkPropertyMetadata((Double)0,
-                    new PropertyChangedCallback(OnValorChanged)));
+                    new PropertyChangedCallback(OnRatingChanged)));
 
-        //Propiedad
         public Double RatingValue
         {
             get { return (Double)GetValue(RatingValueProperty); }
             set { SetValue(RatingValueProperty, value); }
         }
 
-        //Metodo que se lanza cuando cambia la propiedad
-        private static void OnValorChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        private static void OnRatingChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            RatingControl ratingControl = (RatingControl)d;
-
+            var ratingControl = (RatingControl)d;
             ratingControl.mask.Margin = new Thickness(_startSize * (ratingControl.RatingValue / 2), 0, 0, 0);
 
         }

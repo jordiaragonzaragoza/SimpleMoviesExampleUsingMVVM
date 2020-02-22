@@ -55,12 +55,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Base\ViewModels\ViewModelBaseCollection.cs" />
+    <Compile Include="Base\ViewModels\ViewModelCollectionBase.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Repository\MoviesRepository.cs" />
     <Compile Include="ViewModels\MoviesViewModelCollection.cs" />
     <Compile Include="Views\Converters\BoolToVisibilityConverter.cs" />
     <Compile Include="Views\Converters\StringImageToSourceConverter.cs" />
+    <Compile Include="Views\MovieDetailView.xaml.cs">
+      <DependentUpon>MovieDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MovieListBoxItemView.xaml.cs">
+      <DependentUpon>MovieListBoxItemView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MoviesWindowView.xaml.cs">
       <DependentUpon>MoviesWindowView.xaml</DependentUpon>
     </Compile>
@@ -77,6 +83,14 @@
     <Compile Include="ViewModels\MovieViewModel.cs" />
     <Compile Include="Base\ViewModels\ObservableViewModelBase.cs" />
     <Compile Include="Base\ViewModels\ViewModelBase.cs" />
+    <Page Include="Views\MovieDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MovieListBoxItemView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MoviesWindowView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
