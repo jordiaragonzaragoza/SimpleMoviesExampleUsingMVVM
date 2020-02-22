@@ -61,16 +61,12 @@
     <Compile Include="ViewModels\MoviesViewModelCollection.cs" />
     <Compile Include="Views\Converters\BoolToVisibilityConverter.cs" />
     <Compile Include="Views\Converters\StringImageToSourceConverter.cs" />
-    <Compile Include="Views\MoviesView.xaml.cs">
-      <DependentUpon>MoviesView.xaml</DependentUpon>
+    <Compile Include="Views\MoviesWindowView.xaml.cs">
+      <DependentUpon>MoviesWindowView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\RatingControl.xaml.cs">
       <DependentUpon>RatingControl.xaml</DependentUpon>
     </Compile>
-    <Page Include="Views\MainWindowView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -81,11 +77,7 @@
     <Compile Include="ViewModels\MovieViewModel.cs" />
     <Compile Include="Base\ViewModels\ObservableViewModelBase.cs" />
     <Compile Include="Base\ViewModels\ViewModelBase.cs" />
-    <Compile Include="Views\MainWindowView.xaml.cs">
-      <DependentUpon>MainWindowView.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Page Include="Views\MoviesView.xaml">
+    <Page Include="Views\MoviesWindowView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

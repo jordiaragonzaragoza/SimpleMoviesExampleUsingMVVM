@@ -2,9 +2,9 @@
 
 namespace SimpleMoviesExampleUsingMVVM.Views
 {
-    public partial class MoviesView
+    public partial class MoviesWindowView
     {
-        public MoviesView()
+        public MoviesWindowView()
         {
             InitializeComponent();
             //Set the Data Context

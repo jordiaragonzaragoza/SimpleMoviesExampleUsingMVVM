@@ -1,8 +1,7 @@
 ﻿<Application x:Class="SimpleMoviesExampleUsingMVVM.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:SimpleMoviesExampleUsingMVVM"
-             StartupUri="Views/MainWindowView.xaml">
+             StartupUri="Views/MoviesWindowView.xaml">
     <Application.Resources>
          
     </Application.Resources>
