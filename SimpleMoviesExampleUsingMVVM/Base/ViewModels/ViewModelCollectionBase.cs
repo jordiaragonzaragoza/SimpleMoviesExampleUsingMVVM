@@ -5,22 +5,22 @@ using System.Linq;
 
 namespace SimpleMoviesExampleUsingMVVM.Base.ViewModels
 {
-    public abstract class ViewModelCollectionBase<ViewModel, Model> : ObservableCollection<ViewModel>
+    public abstract class ViewModelCollectionBase<TViewModel, TModel> : ObservableCollection<TViewModel>
     {
         #region Fields
 
-        private List<Model> _modelCollection;
+        private List<TModel> _modelCollection;
 
         #endregion
 
         #region Properties
-        public IList<Model> DomainCollection { get { return _modelCollection; } }
+        public IList<TModel> DomainCollection { get { return _modelCollection; } }
 
         #endregion
 
         #region Constructor
 
-        protected ViewModelCollectionBase(IEnumerable<Model> modelCollection)
+        protected ViewModelCollectionBase(IEnumerable<TModel> modelCollection)
         {
             // Set the domain collection
             _modelCollection = modelCollection.ToList();
@@ -28,7 +28,7 @@ namespace SimpleMoviesExampleUsingMVVM.Base.ViewModels
             foreach (var domainObject in modelCollection)
             {
                 var paramList = new object[] { domainObject };
-                var wrapperObject = (ViewModel)Activator.CreateInstance(typeof(ViewModel), paramList);
+                var wrapperObject = (TViewModel)Activator.CreateInstance(typeof(TViewModel), paramList);
                 Add(wrapperObject);
             }
         }

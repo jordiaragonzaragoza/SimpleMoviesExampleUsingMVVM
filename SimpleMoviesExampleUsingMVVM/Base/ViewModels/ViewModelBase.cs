@@ -1,16 +1,16 @@
 ﻿namespace SimpleMoviesExampleUsingMVVM.Base.ViewModels
 {
-    public abstract class ViewModelBase<T> : ObservableViewModelBase
+    public abstract class ViewModelBase<TModel> : ObservableViewModelBase
     {
         #region Properties
 
-        public T Model { get; set; }
+        public TModel Model { get; set; }
 
         #endregion
 
         #region Constructor
 
-        protected ViewModelBase(T model)
+        protected ViewModelBase(TModel model)
         {
             Model = model;
         }
