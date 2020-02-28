@@ -25,13 +25,16 @@ namespace SimpleMoviesExampleUsingMVVM.ViewModels
             get => _selectedMovie;
             set
             {
-                _selectedMovie = value;
+                if (_selectedMovie != value)
+                {
+                    _selectedMovie = value;
 
-                // Update button status when selected movie changes.
-                _previousMovieCommand.RaiseCanExecuteChanged();
-                _nextMovieCommand.RaiseCanExecuteChanged();
+                    // Update button status when selected movie changes.
+                    _previousMovieCommand.RaiseCanExecuteChanged();
+                    _nextMovieCommand.RaiseCanExecuteChanged();
 
-                RaisePropertyChanged("SelectedMovie");
+                    RaisePropertyChanged("SelectedMovie");
+                }
             }
         }
 
@@ -40,8 +43,11 @@ namespace SimpleMoviesExampleUsingMVVM.ViewModels
             get => _moviesCollection;
             set
             {
-                _moviesCollection = value;
-                RaisePropertyChanged("MoviesCollection");
+                if (_moviesCollection != value)
+                {
+                    _moviesCollection = value;
+                    RaisePropertyChanged("MoviesCollection");
+                }
             }
         }
 

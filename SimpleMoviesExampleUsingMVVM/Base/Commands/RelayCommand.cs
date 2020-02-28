@@ -70,6 +70,7 @@ namespace SimpleMoviesExampleUsingMVVM.Base.Commands
 
         public void RaiseCanExecuteChanged()
         {
+            //Self Invoke to evaluate Can Execute.
             if (null != CanExecuteChanged)
             {
                 CanExecuteChanged.Invoke(this, EventArgs.Empty);

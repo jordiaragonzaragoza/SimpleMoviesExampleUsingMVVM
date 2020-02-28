@@ -24,8 +24,11 @@ namespace SimpleMoviesExampleUsingMVVM.ViewModels
             }
             set
             {
-                Model.Id = value;
-                RaisePropertyChanged("Id");
+                if (Model.Id != value)
+                {
+                    Model.Id = value;
+                    RaisePropertyChanged("Id");
+                }
             }
         }
 
@@ -37,8 +40,11 @@ namespace SimpleMoviesExampleUsingMVVM.ViewModels
             }
             set
             {
-                Model.Title = value;
-                RaisePropertyChanged("Title");
+                if (Model.Title != value)
+                {
+                    Model.Title = value;
+                    RaisePropertyChanged("Title");
+                }
             }
         }
 
@@ -50,8 +56,11 @@ namespace SimpleMoviesExampleUsingMVVM.ViewModels
             }
             set
             {
-                Model.Rating = value;
-                RaisePropertyChanged("Rating");
+                if (Model.Rating != value)
+                {
+                    Model.Rating = value;
+                    RaisePropertyChanged("Rating");
+                }
             }
         }
 
@@ -63,8 +72,11 @@ namespace SimpleMoviesExampleUsingMVVM.ViewModels
             }
             set
             {
-                Model.Director = value;
-                RaisePropertyChanged("Director");
+                if (Model.Director != value)
+                {
+                    Model.Director = value;
+                    RaisePropertyChanged("Director");
+                }
             }
         }
 
@@ -76,8 +88,11 @@ namespace SimpleMoviesExampleUsingMVVM.ViewModels
             }
             set
             {
-                Model.Description = value;
-                RaisePropertyChanged("Description");
+                if (Model.Description != null)
+                {
+                    Model.Description = value;
+                    RaisePropertyChanged("Description");
+                }
             }
         }
 
@@ -89,8 +104,11 @@ namespace SimpleMoviesExampleUsingMVVM.ViewModels
             }
             set
             {
-                Model.ImageSource = value;
-                RaisePropertyChanged("ImageSource");
+                if (Model.ImageSource != value)
+                {
+                    Model.ImageSource = value;
+                    RaisePropertyChanged("ImageSource");
+                }
             }
         }
     }
