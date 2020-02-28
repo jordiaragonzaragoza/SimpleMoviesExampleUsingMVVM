@@ -65,7 +65,7 @@ namespace SimpleMoviesExampleUsingMVVM.Base.Commands
         {
             _execute();
         }
-
+        
         public event EventHandler CanExecuteChanged;
 
         public void RaiseCanExecuteChanged()
